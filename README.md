@@ -1,18 +1,18 @@
-# -rn-assignment6-11354613
+# -rn-assignment7-11354613
 
 # DCIT 202 (MOBILE APPLICATION DEVELOPMENT)
 
-### Assignment 6
+### Assignment 7
 
 ### STUDENT ID : 11354613
 
 # Description of Task
 
-This is the sixth assignment for the DCIT 202 (Mobile Application Development) course. The motive of this assignment is to buidl a simple e-commerce app with react native expo.
+This is the seventh assignment for the DCIT 202 (Mobile Application Development) course. The task involves developing a mobile application as part of an assignment for a mobile application development course. The application is an e-commerce app that allows users to view a list of products, view product details, add products to a cart, remove products from the cart, and view the items in their cart. The task requires the implementation of several components and features, including data fetching, local storage, and asynchronous operations.
 
 # App Overview
 
-This is mobile e-commerce application built with React Native. The app allows users to browse products, add them to the cart, and proceed to checkout. It features a clean and modern design with an intuitive user interface.
+The e-commerce mobile application allows users to browse through a list of available products fetched from an external API. Users can view detailed information about each product, add products to their cart, remove products from their cart, and view the contents of their cart. The app provides a seamless shopping experience with an easy-to-navigate interface and persistent local storage to maintain the cart's state.
 
 # Development Tools Used for App Build.
 
@@ -31,21 +31,29 @@ This is mobile e-commerce application built with React Native. The app allows us
 
 ## Features
 
-### Product Listing
+### Product List Display (HomeScreen)
 
-- Users can browse a list of products.
-- Each product displays an image, name, details, and price.
+- Displays a list of available products fetched from an external API.
+- Each product is presented with a brief description and image.
 
-### Cart Management
+### Product Detail Display (ProductDetailScreen)
 
-- Users can add products to their cart.
-- Users can remove products from their cart.
-- The cart displays a list of selected products with their details and prices.
+- Shows detailed information about a selected product.
+- Provides an option to add the product to the cart.
 
-### Checkout Process
+### Cart Display (CartScreen)
 
-- The app calculates the estimated total price of the products in the cart.
-- Users can proceed to the checkout process.
+- Displays the products that the user has added to their cart.
+- Allows users to remove items from the cart.
+- Shows the total cost of the items in the cart.
+
+### Data Fetching
+
+- Fetches data from an external API using fetch .
+
+### Local Storage
+
+- Uses AsyncStorage, SecureStore, or FileSystem to store selected items locally on the device.
 
 ### Persistent Storage
 
@@ -53,28 +61,36 @@ This is mobile e-commerce application built with React Native. The app allows us
 
 ## Components
 
+### HomeScreen
+
+- Displays a list of available products.
+- Each product card includes an image, name, and price.
+- Each product card has an "Add to cart" button.
+
+### ProductDetailScreen
+
+- Shows detailed information about a selected product, including an image, name, description, and price.
+- Provides an option to add the product to the cart.
+
 ### CartScreen
 
-- The main screen for managing the cart.
-- Displays the list of products added to the cart.
-- Allows users to remove products from the cart.
-- Shows the estimated total price and a checkout button.
+- Displays the products added to the cart.
+- Each cart item includes an image, name, and price.
+- Each cart item has a "Remove from cart" button.
+- Shows the estimated total cost of the items in the cart.
+- Includes a checkout button.
 
-### Product Card
+### Drawer/Navigation Menu
 
-- Displays individual product details.
-- Includes product image, name, details, and price.
-- A button to add the product to the cart.
+- Provides easy navigation between different screens of the app.
 
-### Header
+### Functionlity
 
-- Displays the app logo and a search icon.
-- Contains the checkout heading with an underline and circle design.
-
-### Footer
-
-- Shows the estimated total price.
-- Contains the checkout button with a bag icon and text.
+- Users can view a list of available products from an external API.
+- Users can preview detailed information about a product.
+- Users can add products to their cart.
+- Users can remove products from their cart.
+- Users can view the items in their cart.
 
 ## Tools and Libraries
 
@@ -99,12 +115,12 @@ This is mobile e-commerce application built with React Native. The app allows us
 
 ## Screenshots of fashion-commerce app
 
-![Screenshot](fashion-commerce/assets/images/Screenshot%202024-07-03%20185455.png)
-![Screenshot](fashion-commerce/assets/images/Screenshot%202024-07-03%20185528.png)
+![Home](<Screenshot 2024-07-11 192755.png>)
+![Cart](<Screenshot 2024-07-11 194448.png>) ![Drawer](<Screenshot 2024-07-11 194331.png>) ![Product Detail](<Screenshot 2024-07-11 192832.png>)
 
 ## How to run app if cloning from this repo.
 
-1. Clone the repository: `git clone https://github.com/McEsselB/-rn-assignment6-11354613.git`
+1. Clone the repository: `git clone https://github.com/McEsselB/-rn-assignment7-11354613.git`
 2. Install Expo CLI: `npm install -g expo-cli`
 3. Install various dependencies needed using: `npm install`
 4. Start the development
