@@ -133,12 +133,14 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: '#f8f8f8',
-    marginTop: 40,
+    marginTop: 5,
+   
   },
   flatListContent: {
     paddingHorizontal: 10,
   },
   header: {
+    marginTop: 30,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -199,19 +201,23 @@ const styles = StyleSheet.create({
   },
   drawerHeaderText: {
     fontSize: 18,
-    textDecorationLine: 'underline',
-    textDecorationColor: '#FF0377',
+    borderBottomWidth: 3,
     marginTop: 20,
     letterSpacing: 3,
     marginLeft: -40,
+    borderBottomColor: 'orange'
+
+    
+  
   },
   cancelIconWrapper: {
     marginRight: 20,
-    marginTop: -70,
+    marginTop: -40,
   },
   cancelIcon: {
     width: 26,
     height: 26,
+    
   },
   drawerItem: {
     fontSize: 18,

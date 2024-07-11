@@ -14,7 +14,7 @@ const handleFilterPress = () => {
 const toggleDrawer = () => {
   setDrawerVisible(!drawerVisible);
 };
-// Other components and imports...
+
 
 const ProductDetailScreen = ({ route, navigation }) => {
   const { product } = route.params;
@@ -43,7 +43,7 @@ const ProductDetailScreen = ({ route, navigation }) => {
     <SafeAreaView style={styles.safeArea}>
       {renderHeader()}
       <View style={[styles.imageContainer, { height: imageHeight }]}>
-        <Image source={product.image} style={styles.productImage} />
+        <Image source={{ uri: product.image }} style={styles.productImage} />
       </View>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.detailsContainer}>

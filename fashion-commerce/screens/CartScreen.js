@@ -15,6 +15,7 @@ const CartScreen = () => {
       if (cartData) {
         setCart(JSON.parse(cartData));
       }
+      console.log(cart)
     };
     loadCart();
   }, []);
@@ -52,10 +53,12 @@ const calculateTotal = () => {
 
   const renderCartItem = ({ item }) => (
     <View style={styles.cartItem}>
-      <Image source={item.image} style={styles.productImage} />
+      <Image source={{ uri: item.image }} style={styles.image}
+      resizeMode= 'contain'/>
       <View style={styles.productDetails}>
-        <Text style={styles.productName}>{item.name}</Text>
-        <Text style={styles.productDetail}>{item.detail}</Text>
+         <Text style={styles.category}>{item.category}</Text>
+        <Text style={styles.productName}>{item.title}</Text>
+        {/* <Text style={styles.productDetail}>{item.detail}</Text> */}
         <Text style={styles.productPrice}>{item.price}</Text>
       </View>
       <TouchableOpacity onPress={() => removeFromCart(item)}>
@@ -165,13 +168,18 @@ const styles = StyleSheet.create({
   productDetails: {
     flex: 1,
   },
+
+  category: {
+    fontSize: 16,
+  },
+
   productName: {
     fontSize: 16,
     fontWeight: 'bold',
   },
   productDetail: {
     fontSize: 14,
-    color: '#888',
+    color: '#000000',
   },
   productPrice: {
     fontSize: 16,
@@ -179,6 +187,12 @@ const styles = StyleSheet.create({
     marginTop: 5,
     color: '#FC9959',
   },
+  
+  image: {
+    width: 80,
+    height: 100,
+  },
+
   cancelIcon: {
     width: 24,
     height: 24,

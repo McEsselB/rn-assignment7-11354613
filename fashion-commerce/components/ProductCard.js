@@ -3,16 +3,18 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 const ProductCard = ({ product, onAddToCart, navigation }) => (
   <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('ProductDetail', { product })}>
-    <Image source={{ uri: product.image }} style={styles.image} />
+    <Image source={{ uri: product.image }} style={styles.image}
+            resizeMode='contain'
+        resizeMethod='scale'/>
     <TouchableOpacity onPress={() => onAddToCart(product)} style={styles.iconButton}>
       <Image
         source={require('../assets/images/add_circle.png')}
-        style={{ width: 24, height: 24 }}
+        style={{ width: 24, height: 24, position: 'relative', top: 68}}
       />
     </TouchableOpacity>
     <View style={styles.textContainer}>
       <Text style={styles.title}>{product.title}</Text>
-      <Text style={styles.detail}>{product.description}</Text>
+      {/* <Text style={styles.detail}>{product.description}</Text> */}
       <Text style={styles.price}>${product.price}</Text>
     </View>
   </TouchableOpacity>
